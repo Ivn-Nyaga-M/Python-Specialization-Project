@@ -26,7 +26,7 @@ load_dotenv()
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = '$n-cy28im$xcmz4thnt3heh^*x9jv5ng-^zhw_0zn057rjuqig'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True#str(os.environ.get('DEBUG')) == "1"
@@ -144,9 +144,7 @@ MEDIA_URL = '/images/'
 
 
 
-STATICFILES_DIRS = [
-    BASE_DIR / 'static'
-]
+STATICFILES_DIRS = [BASE_DIR / 'static']
 
 MEDIA_ROOT = BASE_DIR / 'static/images'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
