@@ -1,0 +1,111 @@
+
+/* Styling for the home page */
+
+/* Hero Section */
+#home__hero {
+    background-color: #1aaaae;
+    color: #FFFFFF;
+    padding: 2em 1em;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 2em;
+}
+
+#hero__content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+#hero__content p {
+    font-size: 16px;
+    line-height: 1.8em;
+}
+
+/* Events Section */
+.events--lists {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+}
+
+.event__wrapper {
+    border: 1px solid #1aaaae;
+    padding: 1.5em;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.event__wrapper:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.event__preview--title {
+    font-size: 20px;
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+.event__preview__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 0.5em;
+}
+
+.event--date {
+    color: #1aaaae;
+    font-weight: 500;
+}
+
+/* Users Section */
+.users--lists {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5em;
+}
+
+.wrapper--user {
+    text-align: center;
+    padding: 1em;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.wrapper--user:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper--user p {
+    font-size: 14px;
+    color: #000000;
+    margin-top: 0.5em;
+}
+
+/* Pagination */
+.paginator--wrapper {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.paginator--wrapper .btn {
+    margin: 0.5em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #hero__content h3 {
+        font-size: 24px;
+    }
+
+    #hero__content p {
+        font-size: 14px;
+    }
+}

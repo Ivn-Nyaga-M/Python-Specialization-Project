@@ -1,0 +1,109 @@
+/* Styling for Register/Login Page */
+
+/* General Container Styling */
+.login-register--container {
+    max-width: 400px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Headings */
+.form-field--title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1aaaae;
+    margin-bottom: 1.5em;
+}
+
+.login-greattings {
+    font-size: 18px;
+    font-weight: 400;
+    color: #9f2952;
+    margin-bottom: 0.5em;
+}
+
+/* Form Field Styling */
+.form-field--wrapper {
+    margin-bottom: 1.5em;
+    text-align: left;
+}
+
+.form-field--wrapper label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 0.5em;
+    display: block;
+}
+
+.form-field--input {
+    width: 100%;
+    padding: 0.8em;
+    font-size: 14px;
+    border: 1px solid #1aaaae;
+    border-radius: 6px;
+    transition: border-color 0.3s;
+}
+
+.form-field--input:focus {
+    border-color: #9f2952;
+    outline: none;
+}
+
+/* Error Messages */
+.error {
+    font-size: 12px;
+    color: #9f2952;
+    margin-top: 0.5em;
+}
+
+/* Submit Button */
+.formsubmit-btn {
+    background-color: #1aaaae;
+    color: #FFFFFF;
+    border: none;
+    padding: 1em;
+    font-weight: 600;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.formsubmit-btn:hover {
+    background-color: #9f2952;
+    transform: translateY(-2px);
+}
+
+/* Switch Links */
+.login-register-switchpagetext {
+    margin-top: 1.5em;
+    font-size: 14px;
+    color: #000000;
+}
+
+.login-register-switchpagetext a {
+    color: #1aaaae;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.login-register-switchpagetext a:hover {
+    color: #9f2952;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .login-register--container {
+        padding: 1.5em;
+    }
+
+    .form-field--title {
+        font-size: 20px;
+    }
+}

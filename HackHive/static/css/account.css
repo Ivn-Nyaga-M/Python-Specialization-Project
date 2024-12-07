@@ -1,0 +1,72 @@
+
+/* Styling for the account page */
+
+/* Avatar Section */
+.user--avatar--lg {
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #1aaaae;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 1.5em;
+}
+
+/* Account Buttons Section */
+#account--buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+}
+
+/* General Button Styling */
+#account--buttons .btn {
+    padding: 0.8em 1.5em;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Events and Submissions Sections */
+.section h3 {
+    color: #1aaaae;
+    font-size: 24px;
+    margin-bottom: 0.5em;
+    border-bottom: 2px solid #1aaaae;
+    padding-bottom: 0.3em;
+    display: inline-block;
+}
+
+.section a {
+    display: block;
+    margin: 0.5em 0;
+    color: #000000;
+    font-weight: 500;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.section a:hover {
+    color: #9f2952;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.section p {
+    color: #9f2952;
+    font-style: italic;
+    margin: 1em 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #account--buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #account--buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,76 @@
+/* Profile Page Styling */
+
+/* General Section Styling */
+.section {
+    margin: 2em 0;
+    text-align: center;
+}
+
+/* User Avatar */
+.user--avatar--lg {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #1aaaae;
+    margin-bottom: 1em;
+}
+
+/* User Name */
+.section h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1aaaae;
+    margin: 0.5em 0;
+}
+
+/* Social Links */
+.section a {
+    font-size: 16px;
+    color: #1aaaae;
+    font-weight: 500;
+    margin: 0.5em;
+    display: inline-block;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.section a:hover {
+    color: #9f2952;
+    transform: translateY(-3px);
+}
+
+/* Bio Section */
+.section p {
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.6em;
+    margin-top: 1em;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 1.5em;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .user--avatar--lg {
+        height: 120px;
+        width: 120px;
+    }
+
+    .section h1 {
+        font-size: 24px;
+    }
+
+    .section a {
+        font-size: 14px;
+        margin: 0.4em;
+    }
+
+    .section p {
+        font-size: 14px;
+        padding: 1em;
+    }
+}

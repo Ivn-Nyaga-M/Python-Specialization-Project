@@ -1,6 +1,8 @@
 {% extends 'main.html' %}
+{% load static %}
 
 {% block content %}
+<link rel='stylesheet' type='text/css' media='screen' href='{% static "css/login_register.css" %}'>
 
     {% if page == 'register' %}
         <div class="login-register--container">

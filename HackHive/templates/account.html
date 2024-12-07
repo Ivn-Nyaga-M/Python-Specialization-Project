@@ -1,6 +1,9 @@
 {% extends 'main.html' %}
+{% load static %}
 
 {% block content %}
+<link rel='stylesheet' type='text/css' media='screen' href='{% static "css/account.css" %}'>
+    
     <div class="section">
         <img class="user--avatar--lg" src="{{user.avatar.url}}"/>
     </div>
