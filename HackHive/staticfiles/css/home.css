@@ -96,8 +96,26 @@
 }
 
 .paginator--wrapper .btn {
-    margin: 0.5em;
+    display: inline-block;
+    width: 40px; /* Set a fixed width for square buttons */
+    height: 40px; /* Match height to width for square shape */
+    line-height: 40px; /* Center the text vertically */
+    text-align: center;
+    margin: 0.5em; /* Adjust spacing between buttons */
+    border-radius: 4px; /* Optional: slight rounding for modern look */
+    background-color: #1aaaae; /* Button background color */
+    color: #FFFFFF; /* Text color */
+    font-size: 14px; /* Text size */
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none; /* Remove underline */
 }
+
+.paginator--wrapper .btn:hover {
+    background-color: #9f2952; /* Change background color on hover */
+    transform: translateY(-3px); /* Slight hover effect */
+}
+
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {

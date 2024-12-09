@@ -81,7 +81,10 @@
         </div>
         <div class="section paginator--wrapper">
             {% for page in pages %}
-                <a class="btn btn--primary" href="?page={{page}}">{{page}}</a>
+                <a class="btn btn--primary" href="?page={{page}}"
+                    style="width: 40px; height: 40px; line-height: 40px; display: inline-block; text-align: center; padding: 0; margin: 0.5em; border-radius: 4px; background-color: #1aaaae; color: #FFFFFF; text-decoration: none;">
+                    {{page}}
+                </a>
             {% endfor %}
         </div>
     </section>

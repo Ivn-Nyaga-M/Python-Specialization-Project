@@ -1,51 +1,69 @@
-/* Navbar Styling */
+/* Navbar Container */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 2em;
-    background-color: #1aaaae; /* Consistent with the existing design */
-    color: #FFFFFF;
-    border-bottom: 2px solid #FFFFFF;
+    padding: 1rem 2rem;
+    background-color: #000000; /* Black background */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin: 0; /* Remove extra spacing */
+    border: none;
 }
 
-#logo--wrapper {
-    display: flex;
-    align-items: center;
-}
-
+/* Logo Styling */
 #logo--text {
-    font-size: 28px;
-    font-weight: 700;
-    color: #000000; /* Visible on the navbar background */
-    transition: color 0.3s;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1aaaae;
+    transition: color 0.3s ease;
 }
 
 #logo--text:hover {
-    color: #9f2952; /* Matches hover effects for buttons */
+    color: #9f2952;
 }
 
+/* Right Section */
 #nav--col3 {
     display: flex;
-    gap: 1em; /* Adds spacing between buttons */
+    gap: 1rem;
 }
 
-#nav--col3 .btn {
-    font-size: 14px; /* Matches the font size in buttons */
-    padding: 0.5em 1em; /* Consistent padding */
+/* Buttons */
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav a {
-    text-decoration: none;
+.btn--secondary {
+    background-color: #1aaaae;
     color: #FFFFFF;
-    transition: color 0.3s;
 }
 
-nav a:hover {
-    color: #9f2952; /* Hover effect consistent with other links */
+.btn--secondary:hover {
+    background-color: #9f2952;
+    color: #FFFFFF;
 }
 
-@media (max-width: 800px) {
+.btn--primary {
+    background-color: #1aaaae;
+    color: #FFFFFF;
+}
+
+.btn--primary:hover {
+    background-color: #9f2952;
+    color: #FFFFFF;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
     nav {
         flex-direction: column;
         text-align: center;
@@ -53,6 +71,10 @@ nav a:hover {
 
     #nav--col3 {
         flex-direction: column;
-        gap: 0.5em;
+        gap: 0.5rem;
+    }
+
+    .btn {
+        width: 100%;
     }
 }

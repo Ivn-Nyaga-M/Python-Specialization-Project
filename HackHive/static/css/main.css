@@ -1,70 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
-
-* {
-    box-sizing: border-box;
+/* General Page Styling */
+body {
     margin: 0;
-    padding: 0;
-    font-family: 'Readex Pro', sans-serif;
-    line-height: 1.5em;
-    color: #000000;
-    font-size: 14px;
-    background-color: #FFFFFF;
+    font-family: 'Arial', sans-serif;
+    color: #000000; /* Black text */
+    background-color: #FFFFFF; /* White background */
 }
 
+.container--main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Headings */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-    color: #1aaaae;
+    color: #1aaaae; /* Teal headings */
+    font-weight: bold;
 }
 
-h1 {
-    font-size: 48px;
-}
-
-h2 {
-    font-size: 40px;
-}
-
-h3 {
-    font-size: 36px;
-}
-
-h4 {
-    font-size: 32px;
-}
-
-h5 {
-    font-size: 28px;
-}
-
-h6 {
-    font-size: 24px;
-}
-
+/* Paragraphs */
 p {
-    color: #000000;
+    margin: 1em 0;
 }
 
+/* Links */
 a {
-    text-decoration: none;
     color: #1aaaae;
-    transition: color 0.3s;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
     color: #9f2952;
 }
 
-.section {
-    margin: 2em 0;
-}
-
+/* Buttons (Unified) */
 .btn {
-    padding: 10px 20px;
-    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
     font-weight: 500;
-    display: block;
     text-align: center;
-    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn--primary {
@@ -77,131 +56,17 @@ a:hover {
 }
 
 .btn--secondary {
-    background-color: #FFFFFF;
-    color: #000000;
-    border: 1px solid #1aaaae;
+    background-color: #1aaaae;
+    color: #FFFFFF;
 }
 
 .btn--secondary:hover {
     background-color: #9f2952;
-    color: #FFFFFF;
 }
 
-.container--main {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1em;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em 2em;
-    background-color: #1aaaae;
-    color: #FFFFFF;
-}
-
-nav a {
-    color: #FFFFFF;
-    margin: 0 10px;
-}
-
-#logo--text {
-    font-size: 28px;
-    font-weight: 700;
-    color: #FFFFFF;
-}
-
-.events--lists {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2em;
-}
-
-.event__wrapper {
-    border: 1px solid #1aaaae;
-    padding: 1.5em;
-    border-radius: 8px;
-    background-color: #FFFFFF;
-    transition: box-shadow 0.3s;
-}
-
-.event__wrapper:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.event__preview--title {
-    font-size: 22px;
-    color: #000000;
-    font-weight: 600;
-}
-
-.dot {
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-}
-
-.dot--green {
-    background-color: #1aaaae;
-}
-
-.dot--red {
-    background-color: #9f2952;
-}
-
-.wrapper--user {
-    text-align: center;
-    padding: 1em;
-    border-radius: 6px;
-    background-color: #FFFFFF;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.avatar__border {
-    border: 2px solid #1aaaae;
-    padding: 2px;
-    border-radius: 50%;
-}
-
-.user--avatar--sm {
-    height: 60px;
-    width: 60px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-.login-register--container {
-    max-width: 500px;
-    margin: 2em auto;
-    padding: 2em;
-    border-radius: 8px;
-    background-color: #FFFFFF;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.formsubmit-btn {
-    background-color: #1aaaae;
-    color: #FFFFFF;
-    border: none;
-    width: 100%;
-    padding: 1em;
-    font-weight: 600;
-    transition: background-color 0.3s;
-}
-
-.formsubmit-btn:hover {
-    background-color: #9f2952;
-}
-
-@media (max-width: 800px) {
-    .events--lists {
-        grid-template-columns: 1fr;
-    }
-
-    nav {
-        flex-direction: column;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container--main {
+        padding: 1rem;
     }
 }

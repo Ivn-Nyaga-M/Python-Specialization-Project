@@ -1,0 +1,58 @@
+/* Navbar Styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    background-color: #1aaaae; /* Consistent with the existing design */
+    color: #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+#logo--wrapper {
+    display: flex;
+    align-items: center;
+}
+
+#logo--text {
+    font-size: 28px;
+    font-weight: 700;
+    color: #000000; /* Visible on the navbar background */
+    transition: color 0.3s;
+}
+
+#logo--text:hover {
+    color: #9f2952; /* Matches hover effects for buttons */
+}
+
+#nav--col3 {
+    display: flex;
+    gap: 1em; /* Adds spacing between buttons */
+}
+
+#nav--col3 .btn {
+    font-size: 14px; /* Matches the font size in buttons */
+    padding: 0.5em 1em; /* Consistent padding */
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #9f2952; /* Hover effect consistent with other links */
+}
+
+@media (max-width: 800px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #nav--col3 {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+}
