@@ -1,0 +1,13 @@
+{% load static %}
+<link rel='stylesheet' type='text/css' media='screen' href='{% static "css/footer.css" %}'>
+
+<footer id="footer">
+    <div class="footer-container">
+        <p>&copy; {{ year }} HackHive. All Rights Reserved.</p>
+        <ul class="footer-links">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="{% url 'about' %}">About Us</a></li>
+        </ul>
+    </div>
+</footer>

@@ -1,0 +1,71 @@
+/* Namespace for Submit Form Page */
+#submit-form-page {
+    padding: 2em;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+#submit-form-page h4 {
+    font-size: 24px;
+    color: #1aaaae;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+/* Form Styling */
+#submit-form-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    background-color: #f9f9f9;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Fields */
+#submit-form-page form input[type="text"],
+#submit-form-page form input[type="file"],
+#submit-form-page form textarea,
+#submit-form-page form select {
+    width: 100%;
+    padding: 0.8em;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+#submit-form-page form input[type="text"]:focus,
+#submit-form-page form input[type="file"]:focus,
+#submit-form-page form textarea:focus,
+#submit-form-page form select:focus {
+    border-color: #1aaaae;
+    outline: none;
+}
+
+/* Submit Button */
+#submit-form-page form .btn--primary {
+    background-color: #1aaaae;
+    color: #fff;
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#submit-form-page form .btn--primary:hover {
+    background-color: #148f87;
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #submit-form-page {
+        padding: 1em;
+    }
+}

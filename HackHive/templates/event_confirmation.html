@@ -1,9 +1,13 @@
 {% extends 'main.html' %}
+{% load static %}
 
 {% block content %}
+<link rel='stylesheet' type='text/css' media='screen' href='{% static "css/event_confirmation.css" %}'>
+<div id="event-confirmation-page">
     <form method="POST">
         {% csrf_token %}
          <a href="{% url 'event' event.id %}">Go back</a>
         <input type="submit" value="Confirm" />
     </form>
+</div>
 {% endblock content %}

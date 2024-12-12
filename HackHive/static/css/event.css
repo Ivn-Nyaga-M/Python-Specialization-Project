@@ -1,87 +1,181 @@
-* {
-    line-height: 1.6em;
-    font-family: 'Readex Pro', sans-serif;
-    color: #000000;
+/* General Section Styling */
+#event-page .section {
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Light background to separate sections */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    color: #1aaaae;
+/* Event Name */
+#event-page .section h1 {
+    font-size: 2.5rem; /* Slightly larger for emphasis */
+    font-weight: bold;
+    color: #1aaaae; /* Consistent with the primary color */
+    text-align: center;
+    margin-bottom: 1rem;
+    text-transform: uppercase; /* Adds prominence */
+}
+
+/* Event Action Wrapper */
+#event--action--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#event--action--wrapper .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+/* Text Success Messages */
+.text--success {
+    color: #28a745; /* Green for success */
     font-weight: 600;
+    font-size: 1rem;
+    margin: 0.5rem 0;
 }
 
-pre {
-    padding: 1.5em;
-    margin: 1em 0;
-    background: #f9fafa;
+/* Markdown Body Styling */
+.markdown-body {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333333; /* Neutral text color */
+    padding: 1rem;
+    background-color: #ffffff; /* White background for readability */
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    margin-top: 1rem;
+    font-family: 'Georgia', serif; /* Elegant serif font for content text */
+}
+
+/* User Lists */
+.users--lists {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 0;
+    align-items: start; /* Ensures alignment across different user cards */
+}
+
+/* Wrapper for Individual User */
+.wrapper--user {
+    text-align: center;
+    border: 1px solid #eaeaea;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #ffffff; /* White background */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper--user:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+/* Avatar Styles */
+.avatar__border {
     border: 2px solid #1aaaae;
-    border-radius: 6px;
-    font-family: 'Courier New', monospace;
-    color: #000000;
-    overflow-x: auto;
+    border-radius: 50%;
+    padding: 4px;
+    margin-bottom: 0.5rem;
+    width: 70px; /* Consistent sizing for border container */
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensures no overflow from the image */
+    background-color: #ffffff; /* Background color for the border */
 }
 
-code {
-    line-height: 1em;
-    padding: 0.2em 0.4em;
-    background: #DEE4ED;
-    border-radius: 4px;
-    font-family: 'Courier New', monospace;
-    color: #9f2952;
+.user--avatar--sm {
+    width: 60px; /* Consistent avatar size */
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover; /* Ensures images are cropped properly without distortion */
 }
 
-pre, code {
-    transition: background-color 0.3s, color 0.3s;
+/* User Name */
+.wrapper--user p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333333;
+    margin-top: 0.5rem;
+    text-transform: capitalize;
 }
 
-pre:hover {
-    background: #1aaaae;
-    color: #FFFFFF;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .users--lists {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .wrapper--user {
+        padding: 0.5rem;
+    }
+
+    .avatar__border {
+        width: 60px;
+        height: 60px;
+    }
+
+    .user--avatar--sm {
+        width: 50px;
+        height: 50px;
+    }
 }
 
-ul, ol {
-    margin: 1.5em;
-    padding-left: 1.5em;
-    list-style: none;
+/* Additional Text Styling */
+#event-page p {
+    font-size: 1rem;
+    color: #444444;
+    margin: 0.75rem 0;
+    line-height: 1.5;
 }
 
-ul li, ol li {
-    position: relative;
-    padding-left: 1.2em;
-    margin-bottom: 0.5em;
-}
-
-ul li:before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #9f2952;
-    font-size: 1.2em;
-}
-
-ol li {
-    counter-increment: list;
-}
-
-ol li:before {
-    content: counter(list) ".";
-    position: absolute;
-    left: 0;
+/* Headings in Markdown Body */
+#event-page .markdown-body h2,
+#event-page .markdown-body h3 {
     color: #1aaaae;
-    font-weight: 600;
+    font-weight: bold;
+    margin-top: 1.5rem;
 }
 
-p {
-    margin: 1em 0;
-    color: #000000;
-}
-
-p strong {
-    color: #9f2952;
-}
-
-p em {
+#event-page .markdown-body a {
     color: #1aaaae;
-    font-style: italic;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+#event-page .markdown-body a:hover {
+    color: #14878c; /* Slightly darker hover effect */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .section {
+        padding: 1rem;
+    }
+
+    #event--action--wrapper {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .users--lists {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
 }

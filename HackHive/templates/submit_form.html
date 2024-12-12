@@ -1,13 +1,18 @@
 {% extends 'main.html' %}
+{% load static %}
 
 {% block content %}
-    <h4>Submit project for {{event.name}}</h4>
+<link rel='stylesheet' type='text/css' media='screen' href='{% static "css/submit_form.css" %}'>
 
-    <div>
+<div id="submit-form-page">
+    <div class="submit-form-section">
+        <h4>Submit project for {{event.name}}</h4>
+
         <form method="POST">
             {% csrf_token %}
             {{form.as_p}}
-            <input type="submit"/>
+            <input type="submit" value="Submit Project"/>
         </form>
     </div>
+</div>
 {% endblock content %}

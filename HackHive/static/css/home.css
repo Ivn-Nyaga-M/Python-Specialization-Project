@@ -1,3 +1,27 @@
+/* Set the background image for the entire page */
+body {
+    background-image: url("../images/background.png");
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+    background-blend-mode: overlay; /* Blends the image with the background color */
+    background-color: rgba(255, 255, 255, 0.8); /* Adds a white layer with transparency */
+}
+
+/* Add blur effect using ::before */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; /* Inherits the background from the body */
+    filter: blur(8px); /* Applies the blur effect */
+    z-index: -1; /* Places it behind the content */
+}
+
+
 /* General Section Styling */
 .section {
     margin-bottom: 2em;
@@ -18,6 +42,7 @@
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    color: #000000;
 }
 
 #hero__content p {
@@ -148,5 +173,13 @@
 
 .paginator--wrapper a:hover {
     background-color: #9f2952;
+    color: #ffffff;
     transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    body, #home__hero {
+        background-size: auto;
+        backdrop-filter: blur(4px); /* Subtle blur for smaller screens */
+    }
 }

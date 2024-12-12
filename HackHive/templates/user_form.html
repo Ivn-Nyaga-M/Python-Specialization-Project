@@ -1,24 +1,29 @@
 {% extends 'main.html' %}
+{% load static %}
 
 {% block content %}
-<div class="'edit-accinfo-container">
-    <h1 class="form-field--title">Edit Account</h1>
+<link rel='stylesheet' type='text/css' media='screen' href='{% static "css/user_form.css" %}'>
 
-    <div class="section">
-        <form method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
+    <div id="user-form-page">
+        <div class="'edit-accinfo-container">
+            <h1 class="form-field--title">Edit Profile</h1>
 
-            {% for field in form %}
-                <div class="form-field--wrapper">
-                    <label>{{field.label}}</label>
-                    {{field}}
-                </div>
-            {% endfor %}
-            <div class="form-field--wrapper">
-                <input class="btn btn--primary formsubmit-btn" type="submit" value="Update Account" />
+            <div class="section">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    {% for field in form %}
+                        <div class="form-field--wrapper">
+                            <label>{{field.label}}</label>
+                            {{field}}
+                        </div>
+                    {% endfor %}
+                    <div class="form-field--wrapper">
+                        <input class="btn btn--primary formsubmit-btn" type="submit" value="Update Profile" />
+                    </div>
+
+                </form>
             </div>
-
-        </form>
+        </div>
     </div>
-</div>
 {% endblock content %}

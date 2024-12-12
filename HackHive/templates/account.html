@@ -3,13 +3,14 @@
 
 {% block content %}
 <link rel='stylesheet' type='text/css' media='screen' href='{% static "css/account.css" %}'>
-    
+ 
+<div id="account-page">
     <div class="section">
         <img class="user--avatar--lg" src="{{user.avatar.url}}"/>
     </div>
 
     <div id="account--buttons">
-        <a class="btn btn--secondary" href="{% url 'edit-account' %}">Edit</a>
+        <a class="btn btn--secondary" href="{% url 'edit-account' %}">Edit Profile</a>
         <a class="btn btn--secondary" href="{% url 'change-password' %}">Reset password</a>
         <a class="btn btn--primary" href="{% url 'profile' user.id %}">View Profile</a>
     </div>
@@ -32,7 +33,8 @@
             <a href="{% url 'update-submission' sub.id %}">{{sub.event.name}}</a>
         
             {% empty %}
-            <p>You dont haven't submitted any projects yet</p>
+            <p>You haven't submitted any projects yet</p>
         {% endfor %}
     </div>
+</div>
 {% endblock content %}

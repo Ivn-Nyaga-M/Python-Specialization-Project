@@ -169,6 +169,15 @@ def event_page(request, pk):
     context = {'event':event, 'registered':registered, 'submitted':submitted}
     return render(request, 'event.html', context)
 
+def about_page(request):
+    return render(request, 'about.html')
+
+def contact_view(request):
+    if request.method == "POST":
+        # Handle form submission here
+        pass
+    return render(request, 'contact.html')
+
 
 @login_required(login_url='/login')
 def registration_confirmation(request, pk):

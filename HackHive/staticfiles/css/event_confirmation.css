@@ -1,0 +1,51 @@
+/* Scoped styles for the event confirmation page */
+
+/* Styling for the page wrapper */
+#event-confirmation-page {
+    padding: 2em;
+    background-color: #f9f9f9;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for the form */
+#event-confirmation-page form {
+    display: inline-block;
+    background: #fff;
+    padding: 2em;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the 'Go back' link */
+#event-confirmation-page a {
+    display: inline-block;
+    margin-bottom: 1em;
+    text-decoration: none;
+    color: #1aaaae;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#event-confirmation-page a:hover {
+    color: #9f2952;
+}
+
+/* Styling for the submit button */
+#event-confirmation-page input[type="submit"] {
+    display: inline-block;
+    padding: 0.8em 2em;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #1aaaae;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#event-confirmation-page input[type="submit"]:hover {
+    background-color: #9f2952;
+}

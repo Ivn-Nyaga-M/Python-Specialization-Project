@@ -31,7 +31,7 @@ nav {
 }
 
 /* Buttons */
-.btn {
+nav .btn {
     padding: 0.5rem 1rem;
     border-radius: 4px;
     font-size: 0.9rem;
@@ -42,22 +42,22 @@ nav {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.btn--secondary {
+nav .btn--secondary {
     background-color: #1aaaae;
     color: #FFFFFF;
 }
 
-.btn--secondary:hover {
+nav .btn--secondary:hover {
     background-color: #9f2952;
     color: #FFFFFF;
 }
 
-.btn--primary {
+nav .btn--primary {
     background-color: #1aaaae;
     color: #FFFFFF;
 }
 
-.btn--primary:hover {
+nav .btn--primary:hover {
     background-color: #9f2952;
     color: #FFFFFF;
 }

@@ -1,0 +1,107 @@
+/* General page styling */
+#user-form-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1aaaae, #9f2952);
+    color: #000000;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Form container */
+#user-form-page .edit-accinfo-container {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+#user-form-page .form-field--title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #9f2952;
+    margin-bottom: 1.5rem;
+}
+
+/* Form field wrappers */
+#user-form-page .form-field--wrapper input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+#user-form-page .form-field--wrapper label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #000000;
+}
+
+/* Form input fields */
+#user-form-page .form-field--wrapper input[type="text"],
+#user-form-page .form-field--wrapper input[type="email"],
+#user-form-page .form-field--wrapper input[type="password"],
+#user-form-page .form-field--wrapper input[type="file"],
+#user-form-page .form-field--wrapper select,
+#user-form-page .form-field--wrapper textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #000000;
+    outline: none;
+    transition: border 0.3s;
+}
+
+#user-form-page .form-field--wrapper input:focus,
+#user-form-page .form-field--wrapper select:focus,
+#user-form-page .form-field--wrapper textarea:focus {
+    border: 1px solid #1aaaae;
+    box-shadow: 0 0 5px rgba(26, 170, 174, 0.4);
+}
+
+/* Submit button */
+#user-form-page .formsubmit-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #1aaaae;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#user-form-page .formsubmit-btn:hover {
+    background-color: #9f2952;
+    box-shadow: #000000;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .edit-accinfo-container {
+        padding: 1.5rem;
+    }
+
+    .form-field--title {
+        font-size: 1.8rem;
+    }
+
+    .form-field--wrapper input,
+    .form-field--wrapper select,
+    .form-field--wrapper textarea {
+        font-size: 0.85rem;
+    }
+
+    .formsubmit-btn {
+        font-size: 0.9rem;
+    }
+}
