@@ -43,4 +43,3 @@ Create a pull request.
 Acknowledgments
 Thanks to the open-source community for amazing tools like Django and Bootstrap.
 Special recognition to hackathon organizers for inspiring the creation of this platform.
-

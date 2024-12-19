@@ -1,0 +1,67 @@
+/* Namespace for About Page */
+#about-page {
+    background-color: #f9f9fc;
+    padding: 2rem;
+}
+
+/* Header Styling */
+#about-page header {
+    background: #9f2952;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+#about-page header h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Container Styling */
+#about-page .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* About Sections */
+#about-page .about-section {
+    margin-bottom: 2rem;
+}
+
+#about-page .about-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+#about-page .about-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #about-page {
+        padding: 1rem;
+    }
+
+    #about-page .container {
+        padding: 1.5rem;
+    }
+
+    #about-page header h1 {
+        font-size: 2rem;
+    }
+
+    #about-page .about-section h2 {
+        font-size: 1.5rem;
+    }
+}

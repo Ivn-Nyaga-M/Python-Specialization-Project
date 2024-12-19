@@ -1,4 +1,5 @@
 import re
+import logging
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.test import TestCase
@@ -11,6 +12,9 @@ from django.contrib.auth.hashers import make_password
 from PIL import Image
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.contrib import messages
+from django.http import JsonResponse
+from .utils import query_gemini_api
+from .chatbot import ChatBot
 # Create your views here.
 
 def login_page(request):
@@ -100,15 +104,6 @@ def user_page(request, pk):
 def account_page(request):
     user = request.user
 
-    # img = user.avatar
-    # img = Image.open(user.avatar)
-    # newsize = (10, 10)
-    # img = img.resize(newsize)
-  
-    # user.avatar = img
-    # user.save()
-    # user.save()
-
     context = {'user':user}
     return render(request, 'account.html', context)
 
@@ -118,15 +113,7 @@ def edit_account(request):
     form = UserForm(instance=request.user)
 
     if request.method == 'POST':
-        #print('ORIGINAL Image', request.FILES.get('avatar'))
-        # img = Image.open(request.FILES.get('avatar'))
-        # newsize = (10, 10)
-        # img = img.resize(newsize)
-        # request.FILES['avatar'] = img
-        # img = Image.open(user.avatar)
-        # newsize = (10, 10)
-        # img = img.resize(newsize)
-        #print('NEW Image', request.FILES.get('avatar'))
+        
         form = UserForm(request.POST, request.FILES,  instance=request.user)
         if form.is_valid():
             user = form.save(commit=False)
@@ -232,3 +219,52 @@ def update_submission(request, pk):
     context = {'form':form, 'event':event}
 
     return render(request, 'submit_form.html', context)
+
+
+from django.shortcuts import render
+
+@login_required(login_url='/login')
+def chatbot_page(request):
+    """
+    Renders the chatbot interface.
+    """
+    return render(request, 'chatbot.html')
+
+
+#Add owner authentication
+# Initialize conversation history
+logger = logging.getLogger(__name__)
+
+@login_required(login_url='/login')
+def chatbot_interact(request):
+    if "chatbot" not in request.session:
+        chatbot = ChatBot()
+        request.session["chatbot"] = chatbot.to_dict()
+    else:
+        chatbot = ChatBot.from_dict(request.session["chatbot"])
+
+    if request.method == "POST":
+        import json
+        try:
+            body = json.loads(request.body)
+            user_message = body.get("prompt", "").strip()
+
+            if user_message:
+                print(f"User message: {user_message}")
+                bot_message = chatbot.get_response(user_message)
+                print(f"Bot response: {bot_message}")
+                request.session["chatbot"] = chatbot.to_dict()
+                logger.info(f"Response sent: {bot_message}")
+                return JsonResponse({"response": bot_message})
+
+            return JsonResponse({"response": "Error: Please enter a valid prompt."})
+        except Exception as e:
+            logger.error(f"Chatbot interaction error: {e}")
+            return JsonResponse({"response": f"Error: {str(e)}"})
+    chatbot.clear_history()
+    request.session["chatbot"] = chatbot.to_dict()
+    return JsonResponse({"response": "Chatbot ready to interact."})
+
+
+
+

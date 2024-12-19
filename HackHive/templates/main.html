@@ -25,10 +25,15 @@
     {% endif %}
 
     <div class="container--main">
-    {% block content %}
-
-    {% endblock content %}
+        {% block content %}
+        {% endblock content %}
     </div>
+
     {% include 'footer.html' %}
+
+    <!-- Floating Button -->
+    <button id="floating-btn" class="floating-btn" onclick="window.location.href='/chatbot';">
+        AI
+    </button>
 </body>
 </html>
